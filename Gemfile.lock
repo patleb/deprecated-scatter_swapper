@@ -1,8 +1,15 @@
+GIT
+  remote: git://github.com/altabyte/scatter_swap.git
+  revision: 7d39e2e8525feb0d46cd10269750a12b322071e3
+  specs:
+    scatter_swap (0.1.0)
+
 PATH
   remote: .
   specs:
     scatter_swapper (0.1.0)
-      rails (~> 5.0.0)
+      rails (~> 5.0)
+      scatter_swap
 
 GEM
   remote: https://rubygems.org/
@@ -113,6 +120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  scatter_swap!
   scatter_swapper!
   sqlite3
 
