@@ -12,4 +12,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-gem 'scatter_swap', github: 'altabyte/scatter_swap'

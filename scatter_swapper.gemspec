@@ -17,7 +17,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.0"
-  s.add_dependency "scatter_swap"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'bundler', '~> 1.10'
+  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'rspec'
 end

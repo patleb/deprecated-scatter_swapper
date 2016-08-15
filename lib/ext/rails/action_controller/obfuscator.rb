@@ -1,5 +1,3 @@
-require 'scatter_swap'
-
 module ActionController
   module Obfuscator
     extend ActiveSupport::Concern

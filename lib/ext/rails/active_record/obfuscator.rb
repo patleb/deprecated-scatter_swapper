@@ -1,5 +1,3 @@
-require 'scatter_swap'
-
 module ActiveRecord
   module Obfuscator
     extend ActiveSupport::Concern
