@@ -3,6 +3,8 @@ module ActionController
     extend ActiveSupport::Concern
 
     def params
+      return super if ScatterSwapper.config.skip_controller_params
+
       @_params ||= begin
         super.each do |key, value|
           if key =~ /(?:^|_)id$/

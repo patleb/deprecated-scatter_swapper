@@ -1,3 +1,5 @@
+require 'scatter_swapper/configuration'
+
 module ScatterSwapper
   class Engine < ::Rails::Engine
     initializer "scatter_swapper.configure" do
