@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ProductsController do
+describe ProductsController, type: :controller do
   describe '#show' do
     let(:encoded_id) { 623140965 }
     let(:decoded_id) { 1 }

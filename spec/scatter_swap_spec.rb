@@ -21,7 +21,7 @@ describe ScatterSwap do
       100.times do |integer|
         hashed = ScatterSwap.hash(integer)
         expect(ScatterSwap.reverse_hash(hashed).to_i).to eq(integer)
-        puts "#{integer.to_s.rjust(4)} -> #{ScatterSwap.hash(integer)} -> #{ScatterSwap.reverse_hash(hashed).to_i.to_s.rjust(4)}"
+        # puts "#{integer.to_s.rjust(4)} -> #{ScatterSwap.hash(integer)} -> #{ScatterSwap.reverse_hash(hashed).to_i.to_s.rjust(4)}"
       end
     end
 
@@ -40,7 +40,7 @@ describe ScatterSwap do
       end
       results = results.sort.uniq
       expect(results.size).to eq(100)
-      results.each_with_index { |r, i| puts "#{i.to_s.rjust(2)} -> #{r}" }
+      # results.each_with_index { |r, i| puts "#{i.to_s.rjust(2)} -> #{r}" }
     end
 
 
@@ -51,7 +51,7 @@ describe ScatterSwap do
       let(:max)    { '9'.ljust(length, '9').to_i }
 
       it 'should produce unique results' do
-        puts "Testing numbers 0 to #{max}"
+        # puts "Testing numbers 0 to #{max}"
         results = []
         (0..max).each do |input|
           results << ScatterSwap.hash(input, seed, length)
@@ -96,7 +96,7 @@ describe ScatterSwap do
               hashed = ScatterSwap.hash(input, seed, length)
               reversed = ScatterSwap.reverse_hash(hashed, seed, length).to_i
               expect(reversed).to eq(input)
-              puts "#{input.to_s.rjust(4)} -> #{hashed} -> #{reversed.to_s.rjust(4)}"
+              # puts "#{input.to_s.rjust(4)} -> #{hashed} -> #{reversed.to_s.rjust(4)}"
             end
           end
         end
