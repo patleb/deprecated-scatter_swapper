@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 describe Product, type: :model do
-  subject { Product.new(id: 1) }
+  let(:encoded_id) { 623140965 }
+  let(:decoded_id) { 1 }
 
-  it { expect(subject.encoded_id).to eq(623140965) }
+  subject { Product.new(id: decoded_id) }
+
+  it { expect(subject.encoded_id).to eq(encoded_id) }
 end
