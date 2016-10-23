@@ -3,7 +3,7 @@ module ActionController
     extend ActiveSupport::Concern
 
     def params
-      return super if ScatterSwapper.config.skip_controller_params
+      return super if ScatterSwapper.config.skip_controller_params || self.class.try(:skip_obfuscator)
 
       @_params ||= begin
         super.each do |key, value|
